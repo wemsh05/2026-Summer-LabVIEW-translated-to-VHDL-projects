@@ -2,14 +2,14 @@
 # Vivado v2014.4_AR65813_AR64601_AR63880_AR63479_AR62969_(AR63524_AR64594) (64-bit)
 # SW Build (by xbuild) on Tue May 19 17:22:27 MDT 2015
 # IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
-# Start of session at: Tue Jul 21 17:58:33 2026
-# Process ID: 11948
+# Start of session at: Thu Jul 23 16:43:34 2026
+# Process ID: 2500
 # Log file: E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/impl_1/top_ethernet.vdi
 # Journal file: E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source top_ethernet.tcl -notrace
 Command: open_checkpoint top_ethernet_routed.dcp
-INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2014.4_AR65813_AR64601_AR63880_AR63479_AR62969_(AR63524_AR64594)
 Loading clock regions from C:/NIFPGA/programs/Vivado2014_4/data\parts/xilinx/kintex7/kintex7/xc7k325t/ClockRegion.xml
@@ -20,22 +20,28 @@ Loading package from C:/NIFPGA/programs/Vivado2014_4/data\parts/xilinx/kintex7/k
 Loading io standards from C:/NIFPGA/programs/Vivado2014_4/data\./parts/xilinx/kintex7/IOStandards.xml
 Loading device configuration modes from C:/NIFPGA/programs/Vivado2014_4/data\parts/xilinx/kintex7/ConfigModes.xml
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/impl_1/.Xil/Vivado-11948-/dcp/top_ethernet.xdc]
-Finished Parsing XDC File [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/impl_1/.Xil/Vivado-11948-/dcp/top_ethernet.xdc]
+Parsing XDC File [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/impl_1/.Xil/Vivado-2500-/dcp/top_ethernet_early.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:56]
+INFO: [Timing 38-2] Deriving generated clocks [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:56]
+get_clocks: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1018.852 ; gain = 518.656
+Finished Parsing XDC File [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/impl_1/.Xil/Vivado-2500-/dcp/top_ethernet_early.xdc]
+Parsing XDC File [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/impl_1/.Xil/Vivado-2500-/dcp/top_ethernet.xdc]
+Finished Parsing XDC File [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/impl_1/.Xil/Vivado-2500-/dcp/top_ethernet.xdc]
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 500.613 ; gain = 0.000
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 1019.551 ; gain = 0.699
 Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 500.613 ; gain = 0.000
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 1019.551 ; gain = 0.699
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Project 1-483] Checkpoint was created with an internal build that was: SW Build (by xbuild) on Tue May 19 17:22:27 MDT 2015
+open_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1019.805 ; gain = 825.289
 Attempting to get a license for feature 'Implementation' and/or device 'xc7k325t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325t'
-INFO: [Common 17-1223] The version limit for your license is '2016.04' and will expire in -3734 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Common 17-1223] The version limit for your license is '2016.04' and will expire in -3736 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
 Running DRC as a precondition to command write_bitstream
 INFO: [Drc 23-27] Running DRC with 2 threads
 ERROR: [Drc 23-20] Rule violation (UCIO-1) Unconstrained Logical Port - 1 out of 16 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: E_TXD[4].
@@ -48,5 +54,5 @@ INFO: [Common 17-83] Releasing license: Implementation
 ERROR: [Common 17-39] 'write_bitstream' failed due to earlier errors.
 
     while executing
-"write_bitstream -force top_ethernet.bit "
-INFO: [Common 17-206] Exiting Vivado at Tue Jul 21 17:58:40 2026...
+"write_bitstream -force top_ethernet.bit -bin_file"
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 23 16:43:54 2026...

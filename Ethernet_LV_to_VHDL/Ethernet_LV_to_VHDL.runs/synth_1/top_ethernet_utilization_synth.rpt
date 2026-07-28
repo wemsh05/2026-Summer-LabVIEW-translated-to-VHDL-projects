@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.4_AR65813_AR64601_AR63880_AR63479_AR62969_(AR63524_AR64594) (win64) Build 0 Tue May 19 17:22:27 MDT 2015
-| Date         : Tue Jul 21 12:32:24 2026
+| Date         : Thu Jul 23 12:24:34 2026
 | Host         :  running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_ethernet_utilization_synth.rpt -pb top_ethernet_utilization_synth.pb
 | Design       : top_ethernet
@@ -30,13 +30,13 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  210 |     0 |    203800 |  0.10 |
-|   LUT as Logic          |  210 |     0 |    203800 |  0.10 |
+| Slice LUTs*             |  199 |     0 |    203800 |  0.09 |
+|   LUT as Logic          |  199 |     0 |    203800 |  0.09 |
 |   LUT as Memory         |    0 |     0 |     64000 |  0.00 |
 | Slice Registers         |  104 |     0 |    407600 |  0.02 |
 |   Register as Flip Flop |  104 |     0 |    407600 |  0.02 |
 |   Register as Latch     |    0 |     0 |    407600 |  0.00 |
-| F7 Muxes                |    1 |     0 |    101900 | <0.01 |
+| F7 Muxes                |    2 |     0 |    101900 | <0.01 |
 | F8 Muxes                |    0 |     0 |     50950 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   16 |     0 |       500 |  3.20 |
+| Bonded IOB                  |   14 |     0 |       500 |  2.80 |
 | Bonded IPADs                |    0 |     0 |        50 |  0.00 |
 | Bonded OPADs                |    0 |     0 |        32 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |        10 |  0.00 |
@@ -118,7 +118,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |        32 |  3.12 |
+| BUFGCTRL   |    0 |     0 |        32 |  0.00 |
 | BUFIO      |    0 |     0 |        40 |  0.00 |
 | MMCME2_ADV |    0 |     0 |        10 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |        10 |  0.00 |
@@ -152,33 +152,33 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |   96 |                 LUT |
+| LUT6     |   78 |                 LUT |
+| LUT5     |   48 |                 LUT |
 | FDCE     |   44 |        Flop & Latch |
 | LUT2     |   43 |                 LUT |
-| LUT5     |   40 |                 LUT |
 | FDPE     |   34 |        Flop & Latch |
 | LUT1     |   28 |                 LUT |
 | FDRE     |   25 |        Flop & Latch |
-| LUT3     |   23 |                 LUT |
-| LUT4     |   18 |                 LUT |
+| LUT3     |   21 |                 LUT |
+| LUT4     |   19 |                 LUT |
 | OBUF     |   11 |                  IO |
 | CARRY4   |    8 |          CarryLogic |
 | OBUFT    |    2 |                  IO |
+| MUXF7    |    2 |               MuxFx |
 | ODDR     |    1 |                  IO |
-| MUXF7    |    1 |               MuxFx |
-| IBUFDS   |    1 |                  IO |
 | IBUF     |    1 |                  IO |
 | FDSE     |    1 |        Flop & Latch |
-| BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+----------+------+
-| Ref Name | Used |
-+----------+------+
++-----------+------+
+|  Ref Name | Used |
++-----------+------+
+| clk_wiz_0 |    1 |
++-----------+------+
 
 
 9. Instantiated Netlists

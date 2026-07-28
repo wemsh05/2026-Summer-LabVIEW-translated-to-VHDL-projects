@@ -3,7 +3,7 @@
   <device name="xc7k325t_0" gui_info=""/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7k325t_0" gui_info="">
-      <Properties Property="PROBES.FILE" value="E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL.ltx"/>
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/debug_nets.ltx"/>
       <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/top_ethernet.bit"/>
     </Object>
   </ObjectList>

@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2014.4_AR65813_AR64601_AR63880_AR63479_AR62969_(AR63524_AR64594) (win64) Build 0 Tue May 19 17:22:27 MDT 2015
-| Date             : Tue Jul 21 12:34:15 2026
+| Date             : Thu Jul 23 12:26:41 2026
 | Host             : DESKTOP-1F6RSOD running 64-bit major release  (build 9200)
 | Command          : report_power -file top_ethernet_power_routed.rpt -pb top_ethernet_power_summary_routed.pb
 | Design           : top_ethernet
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 0.202  |
-| Dynamic (W)              | 0.041  |
-| Device Static (W)        | 0.161  |
+| Total On-Chip Power (W)  | 0.192  |
+| Dynamic (W)              | 0.031  |
+| Device Static (W)        | 0.160  |
 | Effective TJA (C/W)      | 1.8    |
-| Max Ambient (C)          | 84.6   |
-| Junction Temperature (C) | 25.4   |
+| Max Ambient (C)          | 84.7   |
+| Junction Temperature (C) | 25.3   |
 | Confidence Level         | Medium |
 | Setting File             | ---    |
 | Simulation Activity File | ---    |
@@ -49,17 +49,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.004 |        4 |       --- |             --- |
-| Slice Logic    |     0.004 |      341 |       --- |             --- |
-|   LUT as Logic |     0.004 |      184 |    203800 |            0.09 |
+| Clocks         |     0.005 |        7 |       --- |             --- |
+| Slice Logic    |     0.002 |      332 |       --- |             --- |
+|   LUT as Logic |     0.002 |      171 |    203800 |            0.08 |
 |   Register     |    <0.001 |      104 |    407600 |            0.02 |
 |   CARRY4       |    <0.001 |        8 |     50950 |            0.01 |
-|   F7/F8 Muxes  |    <0.001 |        1 |    203800 |           <0.01 |
-|   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |     0.003 |      255 |       --- |             --- |
-| I/O            |     0.030 |       16 |       500 |            3.20 |
-| Static Power   |     0.161 |          |           |                 |
-| Total          |     0.202 |          |           |                 |
+|   F7/F8 Muxes  |    <0.001 |        2 |    203800 |           <0.01 |
+|   Others       |     0.000 |        8 |       --- |             --- |
+| Signals        |     0.002 |      246 |       --- |             --- |
+| MMCM           |     0.000 |        1 |        10 |           10.00 |
+| I/O            |     0.023 |       16 |       500 |            3.20 |
+| Static Power   |     0.160 |          |           |                 |
+| Total          |     0.192 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -69,10 +70,10 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.080 |       0.012 |      0.068 |
-| Vccaux    |       1.800 |     0.030 |       0.001 |      0.028 |
+| Vccint    |       1.000 |     0.078 |       0.010 |      0.068 |
+| Vccaux    |       1.800 |     0.031 |       0.002 |      0.028 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
-| Vcco25    |       2.500 |     0.012 |       0.011 |      0.001 |
+| Vcco25    |       2.500 |     0.008 |       0.007 |      0.001 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.001 |       0.000 |      0.001 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
@@ -123,11 +124,14 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-----------+-----------+-----------------+
-| Clock     | Domain    | Constraint (ns) |
-+-----------+-----------+-----------------+
-| sys_clk_p | sys_clk_p |             5.0 |
-+-----------+-----------+-----------------+
++--------------------+-----------------------------------+-----------------+
+| Clock              | Domain                            | Constraint (ns) |
++--------------------+-----------------------------------+-----------------+
+| clk_out1_clk_wiz_0 | u_clk_wiz/inst/clk_out1_clk_wiz_0 |            20.0 |
+| clk_out2_clk_wiz_0 | u_clk_wiz/inst/clk_out2_clk_wiz_0 |             8.0 |
+| clkfbout_clk_wiz_0 | u_clk_wiz/inst/clkfbout_clk_wiz_0 |             5.0 |
+| sys_clk_p          | sys_clk_p                         |             5.0 |
++--------------------+-----------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -139,10 +143,12 @@ Table of Contents
 +--------------+-----------+
 | Name         | Power (W) |
 +--------------+-----------+
-| top_ethernet |     0.041 |
-|   u_phy_init |     0.001 |
-|   u_udp_send |     0.009 |
-|     crc_inst |     0.004 |
+| top_ethernet |     0.031 |
+|   u_clk_wiz  |     0.006 |
+|     inst     |     0.006 |
+|   u_phy_init |    <0.001 |
+|   u_udp_send |     0.005 |
+|     crc_inst |     0.002 |
 +--------------+-----------+
 
 

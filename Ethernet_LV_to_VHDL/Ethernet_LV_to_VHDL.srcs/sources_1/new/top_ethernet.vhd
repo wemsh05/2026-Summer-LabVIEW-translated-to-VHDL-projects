@@ -5,59 +5,78 @@ use IEEE.NUMERIC_STD.ALL;
 library UNISIM;
 use UNISIM.VComponents.all;
 
-entity top_ethernet is
-    port (
-        -- System Differential Clock & Reset
-        sys_clk_p    : in  std_logic;                    -- Board 200 MHz Clock (p)
-        sys_clk_n    : in  std_logic;                    -- Board 200 MHz Clock (n)
-        rst_n        : in  std_logic;
-
-        -- 40-Pin Header GMII Physical Interface
-        E_GTXC       : out std_logic;                    -- GMII Transmit Clock
-        E_TXEN       : out std_logic;                    -- GMII Transmit Enable
-        E_TXD        : out std_logic_vector(7 downto 0); -- GMII Transmit Data
-        E_RXC        : in  std_logic;                    -- GMII Receive Clock
-        E_RXDV       : in  std_logic;                    -- GMII Receive Data Valid
-        E_RXD        : inout std_logic_vector(7 downto 0);-- Tristate data line for RXD7 workaround
-        E_RXER       : inout std_logic;                  -- Tristate pin for RXER workaround
-        E_RESET      : out std_logic                     -- PHY Reset Pin
+entity udp_echo_top is
+    Port (
+        -- Board 200 MHz Differential System Clock & Reset
+        sys_clk_p : in  STD_LOGIC;
+        sys_clk_n : in  STD_LOGIC;
+        rst_n     : in  STD_LOGIC;
+        
+        -- AN8211 Ethernet PHY GMII Signals
+        E_RXC     : in  STD_LOGIC;
+        E_RXDV    : in  STD_LOGIC;
+        E_RXD     : in  STD_LOGIC_VECTOR(7 downto 0);
+        E_GTXC    : out STD_LOGIC;                      -- Transmit Clock Forwarding
+        E_TXEN    : out STD_LOGIC;
+        E_TXD     : out STD_LOGIC_VECTOR(7 downto 0);
+        E_RESET   : out STD_LOGIC
     );
-end entity top_ethernet;
+end udp_echo_top;
 
-architecture Structural of top_ethernet is
+architecture Structural of udp_echo_top is
 
-    -- Internal Clock Signal
-    signal sys_clk     : std_logic;
+    -- Internal Clock Nets
+    signal clk_50m     : STD_LOGIC;
+    signal clk_125m    : STD_LOGIC;
+    signal mmcm_locked : STD_LOGIC;
 
-    -- Hardware Signals
-    signal io_dir_trig : std_logic;
-    signal rxd7_out    : std_logic;
-    signal rxer_out    : std_logic;
+    -- Power-on Reset Logic
+    signal phy_rst_cnt : unsigned(19 downto 0) := (others => '0');
+    signal phy_rst_n   : STD_LOGIC := '0';
+
+    -- Dual-Port Payload RAM
+    type ram_type is array (0 to 2047) of std_logic_vector(7 downto 0);
+    signal payload_ram : ram_type;
     
-    signal send_trigger: std_logic := '0';
-    signal ram_addr    : std_logic_vector(10 downto 0);
-    signal ram_data    : std_logic_vector(7 downto 0);
-    
-    type rom_type is array (0 to 17) of std_logic_vector(7 downto 0);
-    constant C_MSG : rom_type := (
-        x"48", x"45", x"4C", x"4C", x"4F", x"20", x"41", x"4C", 
-        x"49", x"4E", x"58", x"20", x"41", x"58", x"33", x"30", x"31", x"0A"
-    );
+    -- RX / TX Inter-module Connections
+    signal rx_data    : STD_LOGIC_VECTOR(7 downto 0);
+    signal rx_addr    : STD_LOGIC_VECTOR(10 downto 0);
+    signal rx_len     : STD_LOGIC_VECTOR(10 downto 0);
+    signal rx_valid   : STD_LOGIC;
+
+    signal rd_addr    : STD_LOGIC_VECTOR(10 downto 0);
+    signal rd_data    : STD_LOGIC_VECTOR(7 downto 0);
+    signal tx_busy    : STD_LOGIC;
+
+    -- Clocking Wizard Component Declaration
+    component clk_wiz_0
+        port (
+            clk_in1_p : in  std_logic;
+            clk_in1_n : in  std_logic;
+            clk_out1  : out std_logic; -- 50 MHz Output
+            clk_out2  : out std_logic; -- 125 MHz Output
+            reset     : in  std_logic;
+            locked    : out std_logic
+        );
+    end component;
 
 begin
 
     --------------------------------------------------------------------
-    -- Differential Clock Input Buffer
+    -- 1. Clocking Infrastructure (MMCM)
     --------------------------------------------------------------------
-    IBUFGDS_inst : IBUFGDS
+    u_clk_wiz : clk_wiz_0
         port map (
-            O  => sys_clk,
-            I  => sys_clk_p,
-            IB => sys_clk_n
+            clk_in1_p => sys_clk_p,
+            clk_in1_n => sys_clk_n,
+            clk_out1  => clk_50m,
+            clk_out2  => clk_125m,
+            reset     => not rst_n,
+            locked    => mmcm_locked
         );
 
     --------------------------------------------------------------------
-    -- ODDR Clock Forwarding for E_GTXC
+    -- 2. ODDR Clock Forwarding for GMII E_GTXC
     --------------------------------------------------------------------
     ODDR_gtxc : ODDR
         generic map(
@@ -67,7 +86,7 @@ begin
         )
         port map (
             Q  => E_GTXC,
-            C  => sys_clk,
+            C  => clk_125m,
             CE => '1',
             D1 => '1',
             D2 => '0',
@@ -76,52 +95,75 @@ begin
         );
 
     --------------------------------------------------------------------
-    -- 1. AN8211 Hardware Initialization Control Block
+    -- 3. Hardware PHY Power-On Reset Engine
     --------------------------------------------------------------------
-    u_phy_init : entity work.phy_init
-        port map (
-            clk_50m     => sys_clk,
-            rst_n       => rst_n,
-            e_reset     => E_RESET,
-            rxd7_out    => rxd7_out,
-            rxer_out    => rxer_out,
-            io_dir_trig => io_dir_trig
-        );
-
-    -- Bidirectional pin assignments for RXD7 and RXER startup sequence
-    E_RXD(7) <= rxd7_out when io_dir_trig = '1' else 'Z';
-    E_RXER   <= rxer_out when io_dir_trig = '1' else 'Z';
-
-    --------------------------------------------------------------------
-    -- 2. ROM Read Mechanism
-    --------------------------------------------------------------------
-    process(sys_clk)
-        variable idx : integer;
+    process(clk_50m, rst_n)
     begin
-        if rising_edge(sys_clk) then
-            idx := to_integer(unsigned(ram_addr));
-            if idx < 18 then
-                ram_data <= C_MSG(idx);
+        if rst_n = '0' then
+            phy_rst_cnt <= (others => '0');
+            phy_rst_n   <= '0';
+        elsif rising_edge(clk_50m) then
+            if mmcm_locked = '1' then
+                if phy_rst_cnt < x"FFFFF" then
+                    phy_rst_cnt <= phy_rst_cnt + 1;
+                    phy_rst_n   <= '0';
+                else
+                    phy_rst_n   <= '1';
+                end if;
             else
-                ram_data <= x"20";
+                phy_rst_cnt <= (others => '0');
+                phy_rst_n   <= '0';
             end if;
         end if;
     end process;
 
+    E_RESET <= phy_rst_n;
+
     --------------------------------------------------------------------
-    -- 3. UDP Send Subsystem
+    -- 4. Dual-Port Payload RAM Buffer
     --------------------------------------------------------------------
-    u_udp_send : entity work.udp_send
+    process(E_RXC)
+    begin
+        if rising_edge(E_RXC) then
+            if rx_valid = '1' or unsigned(rx_addr) > 0 then
+                payload_ram(to_integer(unsigned(rx_addr))) <= rx_data;
+            end if;
+        end if;
+    end process;
+
+    process(clk_125m)
+    begin
+        if rising_edge(clk_125m) then
+            rd_data <= payload_ram(to_integer(unsigned(rd_addr)));
+        end if;
+    end process;
+
+    --------------------------------------------------------------------
+    -- 5. Subsystem Instantiations
+    --------------------------------------------------------------------
+    u_rx : entity work.udp_rx
         port map (
-            clk_125m => sys_clk,
-            rst      => not rst_n,
-            send_en  => '1',
-            data_len => std_logic_vector(to_unsigned(18, 16)),
-            ram_data => ram_data,
-            ram_addr => ram_addr,
-            e_txen   => E_TXEN,
-            e_txd    => E_TXD,
-            tx_busy  => open
+            clk       => E_RXC,
+            rst_n     => phy_rst_n,
+            gmii_rxdv => E_RXDV,
+            gmii_rxd  => E_RXD,
+            rx_data   => rx_data,
+            rx_addr   => rx_addr,
+            rx_len    => rx_len,
+            rx_valid  => rx_valid
         );
 
-end architecture Structural;
+    u_tx : entity work.udp_tx
+        port map (
+            clk       => clk_125m,
+            rst_n     => phy_rst_n,
+            tx_start  => rx_valid,
+            tx_len    => rx_len,
+            rd_data   => rd_data,
+            rd_addr   => rd_addr,
+            gmii_txen => E_TXEN,
+            gmii_txd  => E_TXD,
+            tx_busy   => tx_busy
+        );
+
+end Structural;

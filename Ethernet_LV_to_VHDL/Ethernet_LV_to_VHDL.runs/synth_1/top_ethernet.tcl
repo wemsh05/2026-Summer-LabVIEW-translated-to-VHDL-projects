@@ -14,6 +14,8 @@ set_property webtalk.parent_dir E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/
 set_property parent.project_path E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+add_files -quiet E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/clk_wiz_0_synth_1/clk_wiz_0.dcp
+set_property used_in_implementation false [get_files E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/clk_wiz_0_synth_1/clk_wiz_0.dcp]
 read_vhdl -library xil_defaultlib {
   E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/crc32.vhd
   E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/phy_init.vhd

@@ -64,7 +64,7 @@
         <Option Id="HW_VIO" value="hw_vio_1"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
-        <Option Id="OUTPUT_VALUE" value="65"/>
+        <Option Id="OUTPUT_VALUE" value="67"/>
         <Option Id="OUTPUT_VALUE_RADIX" value="HEX"/>
       </probeOptions>
       <nets>

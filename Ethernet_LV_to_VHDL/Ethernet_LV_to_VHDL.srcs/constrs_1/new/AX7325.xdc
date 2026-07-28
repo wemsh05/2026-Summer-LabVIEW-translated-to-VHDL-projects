@@ -4,12 +4,14 @@ set_property CONFIG_MODE SPIx4 [current_design]
 set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
 set_property CFGBVS VCCO [current_design]
 set_property CONFIG_VOLTAGE 3.3 [current_design]
+set_property BITSTREAM.STARTUP.STARTUPCLK CCLK [current_design]
 
 ############### 200 MHz Differential System Clock ##################
-create_clock -period 5.000 -name sys_clk_p [get_ports sys_clk_p]
+#create_clock -period 5.000 -name sys_clk_p [get_ports sys_clk_p]
 
-set_property PACKAGE_PIN G27 [get_ports sys_clk_p]
-set_property PACKAGE_PIN F28 [get_ports sys_clk_n]
+# Bank 33 - 200 MHz Clock Source (Corrected from G27/F28)
+set_property PACKAGE_PIN AE10 [get_ports sys_clk_p]
+set_property PACKAGE_PIN AF10 [get_ports sys_clk_n]
 set_property IOSTANDARD DIFF_SSTL15 [get_ports sys_clk_p]
 set_property IOSTANDARD DIFF_SSTL15 [get_ports sys_clk_n]
 
@@ -20,7 +22,9 @@ set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets sys_clk]
 create_clock -period 8.000 -name E_RXC [get_ports E_RXC]
 
 ############### System Pins ##################
-set_property -dict { PACKAGE_PIN AG27 IOSTANDARD LVCMOS25 } [get_ports rst_n]
+# Bank 13 - KEY1
+set_property PACKAGE_PIN AG27 [get_ports rst_n]
+set_property IOSTANDARD LVCMOS25 [get_ports rst_n]
 
 ############### GMII Interface (AN8211 Module) ##################
 set_property PACKAGE_PIN P23 [get_ports E_RESET]
@@ -90,11 +94,10 @@ set_property IOSTANDARD LVCMOS25 [get_ports {E_RXD[6]}]
 
 set_property PACKAGE_PIN AH25 [get_ports {E_RXD[7]}]
 set_property IOSTANDARD LVCMOS25 [get_ports {E_RXD[7]}]
+
 ############### Clock Groups ##################
 set_clock_groups -asynchronous -group [get_clocks sys_clk_p] -group [get_clocks E_RXC]
 
-
-# bitstream override property
-set_property BITSTREAM.STARTUP.STARTUPCLK CCLK [current_design]
+############### DRC Overrides ##################
 set_property SEVERITY {Warning} [get_drc_checks UCIO-1]
 set_property SEVERITY {Warning} [get_drc_checks NSTD-1]

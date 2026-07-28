@@ -21,8 +21,7 @@ set_property used_in_implementation false [get_files E:/LabVIEW_to_VHDL_projects
 add_files -quiet E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/vio_0_synth_1/vio_0.dcp
 set_property used_in_implementation false [get_files E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/vio_0_synth_1/vio_0.dcp]
 read_vhdl -library xil_defaultlib {
-  E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_rx.vhd
-  E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_tx.vhd
+  E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/UART_dlw30.vhd
   E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd
 }
 read_xdc E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/constrs_1/new/AX7325_constraints.xdc

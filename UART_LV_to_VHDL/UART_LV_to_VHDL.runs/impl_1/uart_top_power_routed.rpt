@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2014.4_AR65813_AR64601_AR63880_AR63479_AR62969_(AR63524_AR64594) (win64) Build 0 Tue May 19 17:22:27 MDT 2015
-| Date             : Mon Jul 20 02:52:20 2026
+| Date             : Thu Jul 23 19:28:01 2026
 | Host             : DESKTOP-1F6RSOD running 64-bit major release  (build 9200)
 | Command          : report_power -file uart_top_power_routed.rpt -pb uart_top_power_summary_routed.pb
 | Design           : uart_top
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 0.173  |
+| Total On-Chip Power (W)  | 0.172  |
 | Dynamic (W)              | 0.012  |
 | Device Static (W)        | 0.160  |
 | Effective TJA (C/W)      | 1.8    |
@@ -50,19 +50,20 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.006 |        8 |       --- |             --- |
-| Slice Logic              |    <0.001 |     2300 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |      611 |    203800 |            0.29 |
-|   Register               |    <0.001 |     1281 |    407600 |            0.31 |
+| Slice Logic              |    <0.001 |     2355 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |      637 |    203800 |            0.31 |
+|   Register               |    <0.001 |     1311 |    407600 |            0.32 |
 |   CARRY4                 |    <0.001 |       32 |     50950 |            0.06 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     64000 |            0.03 |
+|   BUFG                   |    <0.001 |        1 |        32 |            3.12 |
 |   F7/F8 Muxes            |    <0.001 |       39 |    203800 |            0.01 |
-|   Others                 |     0.000 |      143 |       --- |             --- |
-| Signals                  |    <0.001 |     1637 |       --- |             --- |
+|   Others                 |     0.000 |      141 |       --- |             --- |
+| Signals                  |    <0.001 |     1643 |       --- |             --- |
 | Block RAM                |    <0.001 |        1 |       445 |            0.22 |
 | MMCM                     |     0.000 |        1 |        10 |           10.00 |
-| I/O                      |     0.004 |       14 |       500 |            2.80 |
+| I/O                      |     0.004 |        5 |       500 |            1.00 |
 | Static Power             |     0.160 |          |           |                 |
-| Total                    |     0.173 |          |           |                 |
+| Total                    |     0.172 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -150,7 +151,7 @@ Table of Contents
 | uart_top                                           |     0.012 |
 |   dbg_hub                                          |     0.002 |
 |     inst                                           |     0.002 |
-|       UUT_MASTER                                   |     0.002 |
+|       UUT_MASTER                                   |     0.001 |
 |         U_ICON_INTERFACE                           |     0.001 |
 |           U_CMD1                                   |    <0.001 |
 |           U_CMD2                                   |    <0.001 |
@@ -220,6 +221,7 @@ Table of Contents
 |         U_STAT                                     |    <0.001 |
 |         U_SYNC                                     |    <0.001 |
 |       bscan_inst                                   |    <0.001 |
+|   i_UART                                           |    <0.001 |
 |   i_fifo_uart_recv                                 |    <0.001 |
 |     U0                                             |    <0.001 |
 |       inst_fifo_gen                                |    <0.001 |
@@ -278,8 +280,6 @@ Table of Contents
 |             rstblk                                 |    <0.001 |
 |   i_pll                                            |     0.006 |
 |     inst                                           |     0.006 |
-|   i_uart_rx                                        |    <0.001 |
-|   i_uart_tx                                        |    <0.001 |
 |   i_vio                                            |    <0.001 |
 |     inst                                           |    <0.001 |
 |       DECODER_INST                                 |    <0.001 |

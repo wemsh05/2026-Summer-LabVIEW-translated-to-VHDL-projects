@@ -75,24 +75,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="fifo_async_8x1024.xci" FileRelPathName="fifo_async_8x1024.dcp"/>
-        <CompFileExtendedInfo CompFileName="fifo_async_8x1024.xci" FileRelPathName="fifo_async_8x1024/fifo_async_8x1024.xdc"/>
-        <CompFileExtendedInfo CompFileName="fifo_async_8x1024.xci" FileRelPathName="fifo_async_8x1024/fifo_async_8x1024_clocks.xdc"/>
-        <CompFileExtendedInfo CompFileName="fifo_async_8x1024.xci" FileRelPathName="fifo_async_8x1024.veo"/>
-        <CompFileExtendedInfo CompFileName="fifo_async_8x1024.xci" FileRelPathName="fifo_async_8x1024.xml"/>
-        <CompFileExtendedInfo CompFileName="fifo_async_8x1024.xci" FileRelPathName="synth/fifo_async_8x1024.vhd"/>
-        <CompFileExtendedInfo CompFileName="fifo_async_8x1024.xci" FileRelPathName="fifo_generator_v12_0/hdl/fifo_generator_v12_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="fifo_async_8x1024.xci" FileRelPathName="fifo_generator_v12_0/hdl/fifo_generator_v12_0_vhsyn_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="fifo_async_8x1024.xci" FileRelPathName="fifo_async_8x1024_stub.v"/>
-        <CompFileExtendedInfo CompFileName="fifo_async_8x1024.xci" FileRelPathName="sim/fifo_async_8x1024.vhd"/>
-        <CompFileExtendedInfo CompFileName="fifo_async_8x1024.xci" FileRelPathName="fifo_generator_v12_0/hdl/fifo_generator_v12_0_vh_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="fifo_async_8x1024.xci" FileRelPathName="doc/fifo_generator_v12_0_changelog.txt"/>
-        <CompFileExtendedInfo CompFileName="fifo_async_8x1024.xci" FileRelPathName="fifo_async_8x1024_funcsim.vhdl"/>
-        <CompFileExtendedInfo CompFileName="fifo_async_8x1024.xci" FileRelPathName="fifo_async_8x1024_funcsim.v"/>
-        <CompFileExtendedInfo CompFileName="fifo_async_8x1024.xci" FileRelPathName="fifo_async_8x1024_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="fifo_async_8x1024.xci" FileRelPathName="fifo_async_8x1024_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="fifo_async_8x1024.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd"/>
-        <CompFileExtendedInfo CompFileName="fifo_async_8x1024.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd"/>
       </File>
       <Config>
         <Option Name="TopModule" Val="fifo_async_8x1024"/>
@@ -106,19 +88,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0.dcp"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0.xdc"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0_clk_wiz.v"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0_board.xdc"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="doc/clk_wiz_v5_1_changelog.txt"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0_funcsim.v"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0.xml"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0_funcsim.vhdl"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0.veo"/>
-        <CompFileExtendedInfo CompFileName="clk_wiz_0.xci" FileRelPathName="clk_wiz_0.v"/>
       </File>
       <Config>
         <Option Name="TopModule" Val="clk_wiz_0"/>

@@ -2,8 +2,8 @@
 # Vivado v2014.4_AR65813_AR64601_AR63880_AR63479_AR62969_(AR63524_AR64594) (64-bit)
 # SW Build (by xbuild) on Tue May 19 17:22:27 MDT 2015
 # IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
-# Start of session at: Tue Jul 21 12:31:58 2026
-# Process ID: 19528
+# Start of session at: Thu Jul 23 12:24:05 2026
+# Process ID: 18952
 # Log file: E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/synth_1/top_ethernet.vds
 # Journal file: E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -19,6 +19,8 @@ source top_ethernet.tcl
 # set_property parent.project_path E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.xpr [current_project]
 # set_property default_lib xil_defaultlib [current_project]
 # set_property target_language Verilog [current_project]
+# add_files -quiet E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/clk_wiz_0_synth_1/clk_wiz_0.dcp
+# set_property used_in_implementation false [get_files E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/clk_wiz_0_synth_1/clk_wiz_0.dcp]
 # read_vhdl -library xil_defaultlib {
 #   E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/crc32.vhd
 #   E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/phy_init.vhd
@@ -34,37 +36,36 @@ Command: synth_design -top top_ethernet -part xc7k325tffg900-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
-INFO: [Common 17-1223] The version limit for your license is '2016.04' and will expire in -3734 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Common 17-1223] The version limit for your license is '2016.04' and will expire in -3736 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 239.602 ; gain = 45.109
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 239.746 ; gain = 45.254
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-1565] actual for formal port rst is neither a static name nor a globally static expression [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/top_ethernet.vhd:117]
+WARNING: [Synth 8-1565] actual for formal port reset is neither a static name nor a globally static expression [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/top_ethernet.vhd:72]
+WARNING: [Synth 8-1565] actual for formal port rst_n is neither a static name nor a globally static expression [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/top_ethernet.vhd:101]
+WARNING: [Synth 8-1565] actual for formal port rst is neither a static name nor a globally static expression [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/top_ethernet.vhd:136]
 INFO: [Synth 8-638] synthesizing module 'top_ethernet' [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/top_ethernet.vhd:27]
-	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
-	Parameter DIFF_TERM bound to: 0 - type: bool 
-	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
-	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
-	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-113] binding component instance 'IBUFGDS_inst' to cell 'IBUFGDS' [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/top_ethernet.vhd:52]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/synth_1/.Xil/Vivado-18952-/realtime/clk_wiz_0_stub.v:6' bound to instance 'u_clk_wiz' of component 'clk_wiz_0' [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/top_ethernet.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/synth_1/.Xil/Vivado-18952-/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/synth_1/.Xil/Vivado-18952-/realtime/clk_wiz_0_stub.v:6]
 	Parameter DDR_CLK_EDGE bound to: SAME_EDGE - type: string 
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D1_INVERTED bound to: 1'b0 
 	Parameter IS_D2_INVERTED bound to: 1'b0 
 	Parameter SRTYPE bound to: SYNC - type: string 
-INFO: [Synth 8-113] binding component instance 'ODDR_gtxc' to cell 'ODDR' [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/top_ethernet.vhd:62]
+INFO: [Synth 8-113] binding component instance 'ODDR_gtxc' to cell 'ODDR' [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/top_ethernet.vhd:79]
 INFO: [Synth 8-638] synthesizing module 'phy_init' [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/phy_init.vhd:16]
-INFO: [Synth 8-256] done synthesizing module 'phy_init' (1#1) [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/phy_init.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'phy_init' (2#1) [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/phy_init.vhd:16]
 INFO: [Synth 8-638] synthesizing module 'udp_send' [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/udp_send.vhd:19]
 INFO: [Synth 8-3491] module 'crc32' declared at 'E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/crc32.vhd:4' bound to instance 'crc_inst' of component 'crc32' [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/udp_send.vhd:50]
 INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_crc32' [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/crc32.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_crc32' (2#1) [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/crc32.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'udp_send' (3#1) [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/udp_send.vhd:19]
-INFO: [Synth 8-256] done synthesizing module 'top_ethernet' (4#1) [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/top_ethernet.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_crc32' (3#1) [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/crc32.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'udp_send' (4#1) [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/udp_send.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'top_ethernet' (5#1) [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/top_ethernet.vhd:27]
 WARNING: [Synth 8-3331] design top_ethernet has unconnected port E_RXC
 WARNING: [Synth 8-3331] design top_ethernet has unconnected port E_RXDV
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 273.590 ; gain = 79.098
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 273.703 ; gain = 79.211
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -74,9 +75,9 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 273.590 ; gain = 79.098
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 273.703 ; gain = 79.211
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 Loading clock regions from C:/NIFPGA/programs/Vivado2014_4/data\parts/xilinx/kintex7/kintex7/xc7k325t/ClockRegion.xml
 Loading clock buffers from C:/NIFPGA/programs/Vivado2014_4/data\parts/xilinx/kintex7/kintex7/xc7k325t/ClockBuffers.xml
@@ -89,34 +90,39 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+Parsing XDC File [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/synth_1/.Xil/Vivado-18952-/dcp/clk_wiz_0_in_context.xdc] for cell 'u_clk_wiz'
+Finished Parsing XDC File [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/synth_1/.Xil/Vivado-18952-/dcp/clk_wiz_0_in_context.xdc] for cell 'u_clk_wiz'
 Parsing XDC File [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/constrs_1/new/AX7325.xdc]
-CRITICAL WARNING: [Common 17-69] Command failed: 'AC23' is not a valid site or package pin name. [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/constrs_1/new/AX7325.xdc:57]
-CRITICAL WARNING: [Common 17-69] Command failed: 'AF24' is not a valid site or package pin name. [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/constrs_1/new/AX7325.xdc:79]
+WARNING: [Vivado 12-507] No nets matched 'sys_clk'. [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/constrs_1/new/AX7325.xdc:19]
+CRITICAL WARNING: [Common 17-69] Command failed: 'AC23' is not a valid site or package pin name. [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/constrs_1/new/AX7325.xdc:61]
+CRITICAL WARNING: [Common 17-69] Command failed: 'AF24' is not a valid site or package pin name. [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/constrs_1/new/AX7325.xdc:83]
 Finished Parsing XDC File [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/constrs_1/new/AX7325.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/constrs_1/new/AX7325.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_ethernet_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/constrs_1/new/AX7325.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_ethernet_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_ethernet_propImpl.xdc] to anoth XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 1 instances were transformed.
-  IBUFGDS => IBUFDS: 1 instances
+No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 625.754 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 628.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 625.754 ; gain = 431.262
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 628.211 ; gain = 433.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k325tffg900-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 625.754 ; gain = 431.262
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 628.211 ; gain = 433.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk_p. (constraint file  E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/synth_1/.Xil/Vivado-18952-/dcp/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk_n. (constraint file  E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.runs/synth_1/.Xil/Vivado-18952-/dcp/clk_wiz_0_in_context.xdc, line 5).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 625.754 ; gain = 431.262
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 628.211 ; gain = 433.719
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4471] merging register 'rxer_out_reg' into 'rxd7_out_reg' [E:/LabVIEW_to_VHDL_projects/Ethernet_LV_to_VHDL/Ethernet_LV_to_VHDL.srcs/sources_1/new/phy_init.vhd:32]
 ROM "e_txen" won't be mapped to RAM because it is too sparse.
@@ -128,7 +134,7 @@ ROM "tx_data" won't be mapped to RAM because it is too sparse.
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'udp_send'
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'udp_send'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 625.754 ; gain = 431.262
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 628.211 ; gain = 433.719
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -262,23 +268,16 @@ BRAMs: 890 (col length: RAMB18 140 RAMB36 70)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 625.754 ; gain = 431.262
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 628.211 ; gain = 433.719
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3331] design top_ethernet has unconnected port E_RXD[6]
-WARNING: [Synth 8-3331] design top_ethernet has unconnected port E_RXD[5]
-WARNING: [Synth 8-3331] design top_ethernet has unconnected port E_RXD[4]
-WARNING: [Synth 8-3331] design top_ethernet has unconnected port E_RXD[3]
-WARNING: [Synth 8-3331] design top_ethernet has unconnected port E_RXD[2]
-WARNING: [Synth 8-3331] design top_ethernet has unconnected port E_RXD[1]
-WARNING: [Synth 8-3331] design top_ethernet has unconnected port E_RXD[0]
 WARNING: [Synth 8-3331] design top_ethernet has unconnected port E_RXC
 WARNING: [Synth 8-3331] design top_ethernet has unconnected port E_RXDV
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 625.754 ; gain = 431.262
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 628.211 ; gain = 433.719
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 625.754 ; gain = 431.262
+Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 628.211 ; gain = 433.719
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -300,30 +299,31 @@ WARNING: [Synth 8-3332] Sequential element (\ram_data_reg[7] ) is unused and wil
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 625.754 ; gain = 431.262
+Finished Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 628.211 ; gain = 433.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 625.754 ; gain = 431.262
+Finished Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 628.211 ; gain = 433.719
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 625.754 ; gain = 431.262
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 628.211 ; gain = 433.719
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 625.754 ; gain = 431.262
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 628.211 ; gain = 433.719
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
+INFO: Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 625.754 ; gain = 431.262
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 628.211 ; gain = 433.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 625.754 ; gain = 431.262
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 628.211 ; gain = 433.719
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -335,7 +335,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 625.754 ; gain = 431.262
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 628.211 ; gain = 433.719
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -359,7 +359,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 625.754 ; gain = 431.262
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 628.211 ; gain = 433.719
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -372,7 +372,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 625.754 ; gain = 431.262
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 628.211 ; gain = 433.719
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -384,7 +384,7 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 625.754 ; gain = 431.262
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 628.211 ; gain = 433.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RAM, DSP and Shift Register Reporting
@@ -397,68 +397,67 @@ Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
 
 Report Cell Usage: 
-+------+--------+------+
-|      |Cell    |Count |
-+------+--------+------+
-|1     |BUFG    |     1|
-|2     |CARRY4  |     8|
-|3     |INV     |     1|
-|4     |LUT1    |    27|
-|5     |LUT2    |    43|
-|6     |LUT3    |    23|
-|7     |LUT4    |    18|
-|8     |LUT5    |    40|
-|9     |LUT6    |    96|
-|10    |MUXF7   |     1|
-|11    |ODDR    |     1|
-|12    |FDCE    |    44|
-|13    |FDPE    |    34|
-|14    |FDRE    |    25|
-|15    |FDSE    |     1|
-|16    |IBUF    |     1|
-|17    |IBUFGDS |     1|
-|18    |OBUF    |    11|
-|19    |OBUFT   |     2|
-+------+--------+------+
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |clk_wiz_0 |     1|
+|2     |CARRY4    |     8|
+|3     |INV       |     1|
+|4     |LUT1      |    27|
+|5     |LUT2      |    43|
+|6     |LUT3      |    21|
+|7     |LUT4      |    19|
+|8     |LUT5      |    48|
+|9     |LUT6      |    78|
+|10    |MUXF7     |     2|
+|11    |ODDR      |     1|
+|12    |FDCE      |    44|
+|13    |FDPE      |    34|
+|14    |FDRE      |    25|
+|15    |FDSE      |     1|
+|16    |IBUF      |     1|
+|17    |OBUF      |    11|
+|18    |OBUFT     |     2|
++------+----------+------+
 
 Report Instance Areas: 
 +------+-------------+---------------------+------+
 |      |Instance     |Module               |Cells |
 +------+-------------+---------------------+------+
-|1     |top          |                     |   378|
+|1     |top          |                     |   369|
 |2     |  u_phy_init |phy_init             |    97|
-|3     |  u_udp_send |udp_send             |   254|
-|4     |    crc_inst |xil_defaultlib_crc32 |    95|
+|3     |  u_udp_send |udp_send             |   243|
+|4     |    crc_inst |xil_defaultlib_crc32 |    92|
 +------+-------------+---------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 625.754 ; gain = 431.262
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 628.211 ; gain = 433.719
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 625.754 ; gain = 79.098
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 625.754 ; gain = 431.262
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:20 . Memory (MB): peak = 628.211 ; gain = 74.867
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 628.211 ; gain = 433.719
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  IBUFGDS => IBUFDS: 1 instances
+  A total of 1 instances were transformed.
   INV => LUT1: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-32 Infos, 15 Warnings, 2 Critical Warnings and 0 Errors encountered.
+34 Infos, 12 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 625.754 ; gain = 431.262
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 628.211 ; gain = 431.625
 # write_checkpoint -noxdef top_ethernet.dcp
 # catch { report_utilization -file top_ethernet_utilization_synth.rpt -pb top_ethernet_utilization_synth.pb }
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.087 . Memory (MB): peak = 625.754 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Jul 21 12:32:24 2026...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.116 . Memory (MB): peak = 628.211 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 23 12:24:34 2026...

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="fifo_async_8x1024_synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1784271864">
-  <File Type="RDS-DCP" Name="fifo_async_8x1024.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/fifo_async_8x1024_synth_1/constrs_in.xml"/>
-  <File Type="RDS-UTIL-PB" Name="fifo_async_8x1024_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="fifo_async_8x1024.dcp"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/fifo_async_8x1024_synth_1/sources.xml"/>
-  <File Type="RDS-PROPCONSTRS" Name="fifo_async_8x1024_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="fifo_async_8x1024.tcl"/>
+  <File Type="RDS-UTIL-PB" Name="fifo_async_8x1024_utilization_synth.pb"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/fifo_async_8x1024_synth_1/fifo_async_8x1024_synth_1.psg"/>
+  <File Type="PA-TCL" Name="fifo_async_8x1024.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="fifo_async_8x1024_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="fifo_async_8x1024.vds"/>
   <File Type="RDS-UTIL" Name="fifo_async_8x1024_utilization_synth.rpt"/>
   <File Type="VDS-TIMINGSUMMARY" Name="fifo_async_8x1024_timing_summary_synth.rpt"/>

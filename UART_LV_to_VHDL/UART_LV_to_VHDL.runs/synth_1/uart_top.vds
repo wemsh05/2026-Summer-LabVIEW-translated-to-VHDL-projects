@@ -2,8 +2,8 @@
 # Vivado v2014.4_AR65813_AR64601_AR63880_AR63479_AR62969_(AR63524_AR64594) (64-bit)
 # SW Build (by xbuild) on Tue May 19 17:22:27 MDT 2015
 # IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
-# Start of session at: Mon Jul 20 02:49:23 2026
-# Process ID: 13812
+# Start of session at: Thu Jul 23 19:24:52 2026
+# Process ID: 1112
 # Log file: E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/uart_top.vds
 # Journal file: E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -26,8 +26,7 @@ source uart_top.tcl
 # add_files -quiet E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/vio_0_synth_1/vio_0.dcp
 # set_property used_in_implementation false [get_files E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/vio_0_synth_1/vio_0.dcp]
 # read_vhdl -library xil_defaultlib {
-#   E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_rx.vhd
-#   E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_tx.vhd
+#   E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/UART_dlw30.vhd
 #   E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd
 # }
 # read_xdc E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/constrs_1/new/AX7325_constraints.xdc
@@ -39,34 +38,30 @@ Command: synth_design -top uart_top -part xc7k325tffg900-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
-INFO: [Common 17-1223] The version limit for your license is '2016.04' and will expire in -3733 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Common 17-1223] The version limit for your license is '2016.04' and will expire in -3736 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 240.586 ; gain = 46.023
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 240.508 ; gain = 45.996
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'uart_top' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:43]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-13812-/realtime/clk_wiz_0_stub.v:6' bound to instance 'i_pll' of component 'clk_wiz_0' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:175]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-13812-/realtime/clk_wiz_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-13812-/realtime/clk_wiz_0_stub.v:6]
-INFO: [Synth 8-3491] module 'vio_0' declared at 'E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-13812-/realtime/vio_0_stub.v:7' bound to instance 'i_vio' of component 'vio_0' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:209]
-INFO: [Synth 8-638] synthesizing module 'vio_0' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-13812-/realtime/vio_0_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'vio_0' (2#1) [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-13812-/realtime/vio_0_stub.v:7]
-INFO: [Synth 8-3491] module 'fifo_async_8x1024' declared at 'E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-13812-/realtime/fifo_async_8x1024_stub.v:7' bound to instance 'i_fifo_uart_send' of component 'fifo_async_8x1024' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:226]
-INFO: [Synth 8-638] synthesizing module 'fifo_async_8x1024' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-13812-/realtime/fifo_async_8x1024_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'fifo_async_8x1024' (3#1) [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-13812-/realtime/fifo_async_8x1024_stub.v:7]
-INFO: [Synth 8-3491] module 'fifo_async_8x1024' declared at 'E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-13812-/realtime/fifo_async_8x1024_stub.v:7' bound to instance 'i_fifo_uart_recv' of component 'fifo_async_8x1024' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:243]
-INFO: [Synth 8-3491] module 'uart_rx' declared at 'E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_rx.vhd:5' bound to instance 'i_uart_rx' of component 'uart_rx' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:326]
-INFO: [Synth 8-638] synthesizing module 'uart_rx' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_rx.vhd:15]
-INFO: [Synth 8-226] default block is never used [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_rx.vhd:58]
-INFO: [Synth 8-256] done synthesizing module 'uart_rx' (4#1) [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_rx.vhd:15]
-INFO: [Synth 8-3491] module 'uart_tx' declared at 'E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_tx.vhd:5' bound to instance 'i_uart_tx' of component 'uart_tx' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:335]
-INFO: [Synth 8-638] synthesizing module 'uart_tx' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_tx.vhd:16]
-INFO: [Synth 8-226] default block is never used [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_tx.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'uart_tx' (5#1) [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_tx.vhd:16]
-WARNING: [Synth 8-3936] Found unconnected internal register 'rst_buf_reg' and it is trimmed from '2' to '1' bits. [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:201]
-WARNING: [Synth 8-3936] Found unconnected internal register 'rst_buf_reg' and it is trimmed from '2' to '1' bits. [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:192]
-INFO: [Synth 8-256] done synthesizing module 'uart_top' (6#1) [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'uart_top' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:391]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-1112-/realtime/clk_wiz_0_stub.v:6' bound to instance 'i_pll' of component 'clk_wiz_0' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:548]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-1112-/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-1112-/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-3491] module 'vio_0' declared at 'E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-1112-/realtime/vio_0_stub.v:7' bound to instance 'i_vio' of component 'vio_0' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:582]
+INFO: [Synth 8-638] synthesizing module 'vio_0' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-1112-/realtime/vio_0_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'vio_0' (2#1) [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-1112-/realtime/vio_0_stub.v:7]
+INFO: [Synth 8-3491] module 'fifo_async_8x1024' declared at 'E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-1112-/realtime/fifo_async_8x1024_stub.v:7' bound to instance 'i_fifo_uart_send' of component 'fifo_async_8x1024' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:595]
+INFO: [Synth 8-638] synthesizing module 'fifo_async_8x1024' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-1112-/realtime/fifo_async_8x1024_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'fifo_async_8x1024' (3#1) [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-1112-/realtime/fifo_async_8x1024_stub.v:7]
+INFO: [Synth 8-3491] module 'fifo_async_8x1024' declared at 'E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-1112-/realtime/fifo_async_8x1024_stub.v:7' bound to instance 'i_fifo_uart_recv' of component 'fifo_async_8x1024' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:612]
+INFO: [Synth 8-3491] module 'UART' declared at 'E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/UART_dlw30.vhd:28' bound to instance 'i_UART' of component 'UART' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:755]
+INFO: [Synth 8-638] synthesizing module 'UART' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/UART_dlw30.vhd:44]
+WARNING: [Synth 8-614] signal 'input_baud' is read in the process but is not in the sensitivity list [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/UART_dlw30.vhd:95]
+INFO: [Synth 8-256] done synthesizing module 'UART' (4#1) [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/UART_dlw30.vhd:44]
+WARNING: [Synth 8-3936] Found unconnected internal register 'rst_buf_reg' and it is trimmed from '2' to '1' bits. [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:574]
+WARNING: [Synth 8-3936] Found unconnected internal register 'rst_buf_reg' and it is trimmed from '2' to '1' bits. [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:565]
+INFO: [Synth 8-256] done synthesizing module 'uart_top' (5#1) [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:391]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 274.547 ; gain = 79.984
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 274.586 ; gain = 80.074
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -76,7 +71,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 274.547 ; gain = 79.984
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 274.586 ; gain = 80.074
 ---------------------------------------------------------------------------------
 Loading clock regions from C:/NIFPGA/programs/Vivado2014_4/data\parts/xilinx/kintex7/kintex7/xc7k325t/ClockRegion.xml
 Loading clock buffers from C:/NIFPGA/programs/Vivado2014_4/data\parts/xilinx/kintex7/kintex7/xc7k325t/ClockBuffers.xml
@@ -89,10 +84,19 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-13812-/dcp_2/clk_wiz_0_in_context.xdc] for cell 'i_pll'
-Finished Parsing XDC File [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-13812-/dcp_2/clk_wiz_0_in_context.xdc] for cell 'i_pll'
+Parsing XDC File [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-1112-/dcp_2/clk_wiz_0_in_context.xdc] for cell 'i_pll'
+Finished Parsing XDC File [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-1112-/dcp_2/clk_wiz_0_in_context.xdc] for cell 'i_pll'
 Parsing XDC File [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/constrs_1/new/AX7325_constraints.xdc]
 CRITICAL WARNING: [Constraints 18-1056] Clock 'sys_clk_pin' completely overrides clock 'sys_clk_p'. [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/constrs_1/new/AX7325_constraints.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'read_valid'. [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/constrs_1/new/AX7325_constraints.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'read_d[0]'. [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/constrs_1/new/AX7325_constraints.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'read_d[1]'. [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/constrs_1/new/AX7325_constraints.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'read_d[2]'. [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/constrs_1/new/AX7325_constraints.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'read_d[3]'. [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/constrs_1/new/AX7325_constraints.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'read_d[4]'. [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/constrs_1/new/AX7325_constraints.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'read_d[5]'. [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/constrs_1/new/AX7325_constraints.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'read_d[6]'. [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/constrs_1/new/AX7325_constraints.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'read_d[7]'. [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/constrs_1/new/AX7325_constraints.xdc:38]
 WARNING: [Vivado 12-584] No ports matched 'si5338_scl'. [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/constrs_1/new/AX7325_constraints.xdc:42]
 WARNING: [Vivado 12-584] No ports matched 'si5338_sda'. [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/constrs_1/new/AX7325_constraints.xdc:43]
 Finished Parsing XDC File [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/constrs_1/new/AX7325_constraints.xdc]
@@ -102,33 +106,38 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 624.977 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 624.691 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 624.977 ; gain = 430.414
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 624.691 ; gain = 430.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k325tffg900-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 624.977 ; gain = 430.414
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 624.691 ; gain = 430.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for sys_clk_p. (constraint file  E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-13812-/dcp_2/clk_wiz_0_in_context.xdc, line 4).
-Applied set_property IO_BUFFER_TYPE = NONE for sys_clk_n. (constraint file  E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-13812-/dcp_2/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk_p. (constraint file  E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-1112-/dcp_2/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk_n. (constraint file  E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.runs/synth_1/.Xil/Vivado-1112-/dcp_2/clk_wiz_0_in_context.xdc, line 5).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 624.977 ; gain = 430.414
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 624.691 ; gain = 430.180
 ---------------------------------------------------------------------------------
-ROM "rx_valid" won't be mapped to RAM because it is too sparse.
-ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
-ROM "state" won't be mapped to RAM because it is too sparse.
-ROM "tx_ready" won't be mapped to RAM because it is too sparse.
-ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
-INFO: [Synth 8-4471] merging register 'uart_tx_valid_reg' into 'fifo_tx_rd_en_reg' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:299]
+INFO: [Synth 8-802] inferred FSM for state register 'state_tras_reg' in module 'UART'
+ROM "state_tras" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+INFO: [Synth 8-4471] merging register 'uart_input_valid_reg' into 'fifo_tx_rd_en_reg' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/uart_top.vhd:728]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_top'
+ROM "header_idx" won't be mapped to Block RAM because address size (4) smaller than threshold (5) 
+ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5) 
+ROM "read_d_int" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+INFO: [Synth 8-3354] encoded FSM with state register 'state_tras_reg' using encoding 'sequential' in module 'UART'
+WARNING: [Synth 8-327] inferring latch for variable 'div_par_reg' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/UART_dlw30.vhd:101]
+WARNING: [Synth 8-327] inferring latch for variable 'send_state_reg' [E:/LabVIEW_to_VHDL_projects/UART_LV_to_VHDL/UART_LV_to_VHDL.srcs/sources_1/new/UART_dlw30.vhd:251]
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_top'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 624.977 ; gain = 430.414
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 624.691 ; gain = 430.180
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -141,25 +150,28 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     13 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
 	   2 Input      3 Bit       Adders := 2     
 +---Registers : 
-	               13 Bit    Registers := 2     
-	                8 Bit    Registers := 7     
+	                8 Bit    Registers := 9     
+	                4 Bit    Registers := 2     
 	                3 Bit    Registers := 2     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 14    
+	                1 Bit    Registers := 27    
 +---Muxes : 
-	   2 Input     13 Bit        Muxes := 3     
-	   4 Input     13 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 2     
-	   4 Input      8 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 2     
-	   2 Input      3 Bit        Muxes := 2     
-	   4 Input      2 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 8     
-	   4 Input      1 Bit        Muxes := 11    
+	   9 Input     11 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	  11 Input      8 Bit        Muxes := 2     
+	   6 Input      8 Bit        Muxes := 1     
+	   9 Input      7 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   6 Input      4 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	  11 Input      1 Bit        Muxes := 6     
+	   9 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -169,52 +181,40 @@ Start RTL Hierarchical Component Statistics
 Hierarchical RTL Component report 
 Module uart_top 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 5     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   9 Input      7 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 7     
+Module UART 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
 +---Registers : 
 	                8 Bit    Registers := 4     
-	                1 Bit    Registers := 9     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 16    
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
-Module uart_rx 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     13 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
-+---Registers : 
-	               13 Bit    Registers := 1     
-	                8 Bit    Registers := 2     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 3     
-+---Muxes : 
-	   2 Input     13 Bit        Muxes := 2     
-	   4 Input     13 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 1     
-	   4 Input      8 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 5     
-	   4 Input      1 Bit        Muxes := 5     
-Module uart_tx 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     13 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
-+---Registers : 
-	               13 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     13 Bit        Muxes := 1     
-	   4 Input     13 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
-	   4 Input      1 Bit        Muxes := 6     
+	   9 Input     11 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	  11 Input      8 Bit        Muxes := 2     
+	  14 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 8     
+	  11 Input      1 Bit        Muxes := 6     
+	   9 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -227,17 +227,14 @@ BRAMs: 890 (col length: RAMB18 140 RAMB36 70)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 624.977 ; gain = 430.414
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 624.691 ; gain = 430.180
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
-ROM "i_uart_rx/rx_valid" won't be mapped to RAM because it is too sparse.
-ROM "i_uart_rx/state" won't be mapped to RAM because it is too sparse.
-ROM "i_uart_tx/tx_ready" won't be mapped to RAM because it is too sparse.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 624.977 ; gain = 430.414
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 624.691 ; gain = 430.180
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 624.977 ; gain = 430.414
+Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 624.691 ; gain = 430.180
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -250,23 +247,59 @@ Start RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 Finished RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_UART/div_par_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\i_UART/div_par_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\i_UART/div_par_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_UART/div_par_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_UART/div_par_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_UART/div_par_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\i_UART/div_par_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_UART/div_par_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\i_UART/div_par_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_UART/div_par_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_UART/div_par_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_UART/div_par_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_UART/div_par_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_UART/div_par_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_UART/div_par_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_UART/div_par_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_UART/send_state_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (\i_UART/div_par_reg[15] ) is unused and will be removed from module uart_top.
+WARNING: [Synth 8-3332] Sequential element (\i_UART/div_par_reg[14] ) is unused and will be removed from module uart_top.
+WARNING: [Synth 8-3332] Sequential element (\i_UART/div_par_reg[13] ) is unused and will be removed from module uart_top.
+WARNING: [Synth 8-3332] Sequential element (\i_UART/div_par_reg[12] ) is unused and will be removed from module uart_top.
+WARNING: [Synth 8-3332] Sequential element (\i_UART/div_par_reg[11] ) is unused and will be removed from module uart_top.
+WARNING: [Synth 8-3332] Sequential element (\i_UART/div_par_reg[10] ) is unused and will be removed from module uart_top.
+WARNING: [Synth 8-3332] Sequential element (\i_UART/div_par_reg[9] ) is unused and will be removed from module uart_top.
+WARNING: [Synth 8-3332] Sequential element (\i_UART/div_par_reg[8] ) is unused and will be removed from module uart_top.
+WARNING: [Synth 8-3332] Sequential element (\i_UART/div_par_reg[7] ) is unused and will be removed from module uart_top.
+WARNING: [Synth 8-3332] Sequential element (\i_UART/div_par_reg[6] ) is unused and will be removed from module uart_top.
+WARNING: [Synth 8-3332] Sequential element (\i_UART/div_par_reg[5] ) is unused and will be removed from module uart_top.
+WARNING: [Synth 8-3332] Sequential element (\i_UART/div_par_reg[4] ) is unused and will be removed from module uart_top.
+WARNING: [Synth 8-3332] Sequential element (\i_UART/div_par_reg[3] ) is unused and will be removed from module uart_top.
+WARNING: [Synth 8-3332] Sequential element (\i_UART/div_par_reg[2] ) is unused and will be removed from module uart_top.
+WARNING: [Synth 8-3332] Sequential element (\i_UART/div_par_reg[1] ) is unused and will be removed from module uart_top.
+WARNING: [Synth 8-3332] Sequential element (\i_UART/div_par_reg[0] ) is unused and will be removed from module uart_top.
+WARNING: [Synth 8-3332] Sequential element (\i_UART/send_state_reg[2] ) is unused and will be removed from module uart_top.
+WARNING: [Synth 8-3332] Sequential element (\i_UART/send_state_reg[1] ) is unused and will be removed from module uart_top.
+WARNING: [Synth 8-3332] Sequential element (\i_UART/send_state_reg[0] ) is unused and will be removed from module uart_top.
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 624.977 ; gain = 430.414
+Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 624.691 ; gain = 430.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 624.977 ; gain = 430.414
+Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 624.691 ; gain = 430.180
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 624.977 ; gain = 430.414
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 624.691 ; gain = 430.180
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 624.977 ; gain = 430.414
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 624.691 ; gain = 430.180
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -275,10 +308,10 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 INFO: Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 624.977 ; gain = 430.414
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 624.691 ; gain = 430.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 624.977 ; gain = 430.414
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 624.691 ; gain = 430.180
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -290,7 +323,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 624.977 ; gain = 430.414
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 624.691 ; gain = 430.180
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -314,7 +347,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 624.977 ; gain = 430.414
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 624.691 ; gain = 430.180
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -327,7 +360,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 624.977 ; gain = 430.414
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 624.691 ; gain = 430.180
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -339,7 +372,7 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 624.977 ; gain = 430.414
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 624.691 ; gain = 430.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RAM, DSP and Shift Register Reporting
@@ -368,34 +401,34 @@ Report Cell Usage:
 |2     |fifo_async_8x1024    |     1|
 |3     |fifo_async_8x1024__1 |     1|
 |4     |vio_0                |     1|
-|5     |CARRY4               |     6|
-|6     |LUT1                 |    27|
-|7     |LUT2                 |     6|
-|8     |LUT3                 |     8|
-|9     |LUT4                 |    27|
-|10    |LUT5                 |    17|
-|11    |LUT6                 |    29|
-|12    |FDCE                 |    98|
-|13    |FDPE                 |     4|
-|14    |FDRE                 |     4|
-|15    |IBUF                 |     2|
-|16    |OBUF                 |    10|
+|5     |BUFG                 |     1|
+|6     |CARRY4               |     6|
+|7     |LUT1                 |     4|
+|8     |LUT2                 |    28|
+|9     |LUT3                 |    25|
+|10    |LUT4                 |    20|
+|11    |LUT5                 |     9|
+|12    |LUT6                 |    30|
+|13    |FDCE                 |   107|
+|14    |FDPE                 |     4|
+|15    |FDRE                 |    25|
+|16    |IBUF                 |     2|
+|17    |OBUF                 |     1|
 +------+---------------------+------+
 
 Report Instance Areas: 
-+------+------------+--------+------+
-|      |Instance    |Module  |Cells |
-+------+------------+--------+------+
-|1     |top         |        |   291|
-|2     |  i_uart_rx |uart_rx |   100|
-|3     |  i_uart_tx |uart_tx |    71|
-+------+------------+--------+------+
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   315|
+|2     |  i_UART |UART   |   159|
++------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 624.977 ; gain = 430.414
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 624.691 ; gain = 430.180
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:17 . Memory (MB): peak = 624.977 ; gain = 75.820
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 624.977 ; gain = 430.414
+Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 624.691 ; gain = 75.844
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 624.691 ; gain = 430.180
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -407,10 +440,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-34 Infos, 5 Warnings, 1 Critical Warnings and 0 Errors encountered.
+50 Infos, 36 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 624.977 ; gain = 428.313
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 624.691 ; gain = 428.070
 # write_checkpoint -noxdef uart_top.dcp
 # catch { report_utilization -file uart_top_utilization_synth.rpt -pb uart_top_utilization_synth.pb }
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 624.977 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Jul 20 02:49:48 2026...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.112 . Memory (MB): peak = 624.691 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 23 19:25:19 2026...

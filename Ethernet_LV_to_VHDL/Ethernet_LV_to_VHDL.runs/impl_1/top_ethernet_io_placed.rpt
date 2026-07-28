@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.4_AR65813_AR64601_AR63880_AR63479_AR62969_(AR63524_AR64594) (win64) Build 0 Tue May 19 17:22:27 MDT 2015
-| Date         : Tue Jul 21 12:33:00 2026
+| Date         : Thu Jul 23 12:25:15 2026
 | Host         :  running 64-bit major release  (build 9200)
 | Command      : report_io -file top_ethernet_io_placed.rpt
 | Design       : top_ethernet
@@ -192,7 +192,7 @@ Table of Contents
 | AE7        |             | High Performance | VCCO_34                      | VCCO          |             |      34 |            |      |                     |                      | 0.00-1.80 |            |           |      |                  |
 | AE8        |             | High Performance | IO_L8N_T1_33                 | User IO       |             |      33 |            |      |                     |                      |           |            |           |      |                  |
 | AE9        |             | High Performance | IO_L10N_T1_33                | User IO       |             |      33 |            |      |                     |                      |           |            |           |      |                  |
-| AE10       |             | High Performance | IO_L14P_T2_SRCC_33           | User IO       |             |      33 |            |      |                     |                      |           |            |           |      |                  |
+| AE10       | sys_clk_p   | High Performance | IO_L14P_T2_SRCC_33           | INPUT         | DIFF_SSTL15 |      33 |            |      |                     |                 NONE |           | FIXED      |           |      | NONE             |
 | AE11       |             | High Performance | IO_L11P_T1_SRCC_33           | User IO       |             |      33 |            |      |                     |                      |           |            |           |      |                  |
 | AE12       |             |                  | GND                          | GND           |             |         |            |      |                     |                      |       0.0 |            |           |      |                  |
 | AE13       |             | High Performance | IO_L19P_T3_33                | User IO       |             |      33 |            |      |                     |                      |           |            |           |      |                  |
@@ -222,7 +222,7 @@ Table of Contents
 | AF7        |             | High Performance | IO_L20P_T3_34                | User IO       |             |      34 |            |      |                     |                      |           |            |           |      |                  |
 | AF8        |             | High Performance | IO_L19P_T3_34                | User IO       |             |      34 |            |      |                     |                      |           |            |           |      |                  |
 | AF9        |             |                  | GND                          | GND           |             |         |            |      |                     |                      |       0.0 |            |           |      |                  |
-| AF10       |             | High Performance | IO_L14N_T2_SRCC_33           | User IO       |             |      33 |            |      |                     |                      |           |            |           |      |                  |
+| AF10       | sys_clk_n   | High Performance | IO_L14N_T2_SRCC_33           | INPUT         | DIFF_SSTL15 |      33 |            |      |                     |                 NONE |           | FIXED      |           |      | NONE             |
 | AF11       |             | High Performance | IO_L11N_T1_SRCC_33           | User IO       |             |      33 |            |      |                     |                      |           |            |           |      |                  |
 | AF12       |             | High Performance | IO_L23P_T3_33                | User IO       |             |      33 |            |      |                     |                      |           |            |           |      |                  |
 | AF13       |             | High Performance | IO_L19N_T3_VREF_33           | User IO       |             |      33 |            |      |                     |                      |           |            |           |      |                  |
@@ -510,7 +510,7 @@ Table of Contents
 | F25        |             | High Range       | IO_L3P_T0_DQS_16             | User IO       |             |      16 |            |      |                     |                      |           |            |           |      |                  |
 | F26        |             | High Range       | IO_L5P_T0_16                 | User IO       |             |      16 |            |      |                     |                      |           |            |           |      |                  |
 | F27        |             | High Range       | IO_L21N_T3_DQS_16            | User IO       |             |      16 |            |      |                     |                      |           |            |           |      |                  |
-| F28        | sys_clk_n   | High Range       | IO_L20N_T3_16                | INPUT         | DIFF_SSTL15 |      16 |            |      |                     |                 NONE |           | FIXED      |           |      | NONE             |
+| F28        |             | High Range       | IO_L20N_T3_16                | User IO       |             |      16 |            |      |                     |                      |           |            |           |      |                  |
 | F29        |             |                  | GND                          | GND           |             |         |            |      |                     |                      |       0.0 |            |           |      |                  |
 | F30        |             | High Range       | IO_L22N_T3_16                | User IO       |             |      16 |            |      |                     |                      |           |            |           |      |                  |
 | G1         |             |                  | GND                          | GND           |             |         |            |      |                     |                      |       0.0 |            |           |      |                  |
@@ -540,7 +540,7 @@ Table of Contents
 | G25        |             | High Range       | IO_25_16                     | User IO       |             |      16 |            |      |                     |                      |           |            |           |      |                  |
 | G26        |             |                  | GND                          | GND           |             |         |            |      |                     |                      |       0.0 |            |           |      |                  |
 | G27        |             | High Range       | IO_L21P_T3_DQS_16            | User IO       |             |      16 |            |      |                     |                      |           |            |           |      |                  |
-| G28        | sys_clk_p   | High Range       | IO_L20P_T3_16                | INPUT         | DIFF_SSTL15 |      16 |            |      |                     |                 NONE |           | FIXED      |           |      | NONE             |
+| G28        |             | High Range       | IO_L20P_T3_16                | User IO       |             |      16 |            |      |                     |                      |           |            |           |      |                  |
 | G29        |             | High Range       | IO_L22P_T3_16                | User IO       |             |      16 |            |      |                     |                      |           |            |           |      |                  |
 | G30        |             | High Range       | IO_L24N_T3_16                | User IO       |             |      16 |            |      |                     |                      |           |            |           |      |                  |
 | H1         |             |                  | MGTXTXN2_117                 | Gigabit       |             |         |            |      |                     |                      |           |            |           |      |                  |

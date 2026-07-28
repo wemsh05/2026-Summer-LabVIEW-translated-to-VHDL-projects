@@ -1,0 +1,461 @@
+#-----------------------------------------------------------
+# Vivado v2014.4_AR65813_AR64601_AR63880_AR63479_AR62969_(AR63524_AR64594) (64-bit)
+# SW Build (by xbuild) on Tue May 19 17:22:27 MDT 2015
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Mon Jul 27 19:04:40 2026
+# Process ID: 11136
+# Log file: E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.runs/synth_1/udp_echo_top.vds
+# Journal file: E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source udp_echo_top.tcl
+# set_param gui.test TreeTableDev
+# debug::add_scope template.lib 1
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# create_project -in_memory -part xc7k325tffg900-2
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_param synth.vivado.isSynthRun true
+# set_property webtalk.parent_dir E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.cache/wt [current_project]
+# set_property parent.project_path E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.xpr [current_project]
+# set_property default_lib xil_defaultlib [current_project]
+# set_property target_language Verilog [current_project]
+# add_files -quiet E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.runs/clk_wiz_0_synth_1/clk_wiz_0.dcp
+# set_property used_in_implementation false [get_files E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.runs/clk_wiz_0_synth_1/clk_wiz_0.dcp]
+# read_vhdl -library xil_defaultlib {
+#   E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/sources_1/new/udp_rx.vhd
+#   E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/sources_1/new/udp_tx.vhd
+#   E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/sources_1/new/udp_echo_top.vhd
+# }
+# read_xdc E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/constrs_1/new/AX7325_eth.xdc
+# set_property used_in_implementation false [get_files E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/constrs_1/new/AX7325_eth.xdc]
+# catch { write_hwdef -file udp_echo_top.hwdef }
+INFO: [Vivado_Tcl 4-279] hardware handoff file cannot be generated as there is no block diagram instance in the design
+# synth_design -top udp_echo_top -part xc7k325tffg900-2
+Command: synth_design -top udp_echo_top -part xc7k325tffg900-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Common 17-1223] The version limit for your license is '2016.04' and will expire in -3740 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 240.832 ; gain = 46.273
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'udp_echo_top' [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/sources_1/new/udp_echo_top.vhd:26]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.runs/synth_1/.Xil/Vivado-11136-/realtime/clk_wiz_0_stub.v:6' bound to instance 'u_clk_wiz' of component 'clk_wiz_0' [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/sources_1/new/udp_echo_top.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.runs/synth_1/.Xil/Vivado-11136-/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.runs/synth_1/.Xil/Vivado-11136-/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-113] binding component instance 'u_bufg_rxc' to cell 'BUFG' [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/sources_1/new/udp_echo_top.vhd:84]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-113] binding component instance 'ODDR_gtxc' to cell 'ODDR' [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/sources_1/new/udp_echo_top.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'udp_rx' [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/sources_1/new/udp_rx.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'udp_rx' (2#1) [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/sources_1/new/udp_rx.vhd:20]
+INFO: [Synth 8-638] synthesizing module 'udp_tx' [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/sources_1/new/udp_tx.vhd:23]
+INFO: [Synth 8-226] default block is never used [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/sources_1/new/udp_tx.vhd:95]
+INFO: [Synth 8-256] done synthesizing module 'udp_tx' (3#1) [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/sources_1/new/udp_tx.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'udp_echo_top' (4#1) [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/sources_1/new/udp_echo_top.vhd:26]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 275.367 ; gain = 80.809
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 275.367 ; gain = 80.809
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from C:/NIFPGA/programs/Vivado2014_4/data\parts/xilinx/kintex7/kintex7/xc7k325t/ClockRegion.xml
+Loading clock buffers from C:/NIFPGA/programs/Vivado2014_4/data\parts/xilinx/kintex7/kintex7/xc7k325t/ClockBuffers.xml
+Loading clock placement rules from C:/NIFPGA/programs/Vivado2014_4/data/parts/xilinx/kintex7/ClockPlacerRules.xml
+Loading package pin functions from C:/NIFPGA/programs/Vivado2014_4/data\parts/xilinx/kintex7/PinFunctions.xml...
+Loading package from C:/NIFPGA/programs/Vivado2014_4/data\parts/xilinx/kintex7/kintex7/xc7k325t/ffg900/Package.xml
+Loading io standards from C:/NIFPGA/programs/Vivado2014_4/data\./parts/xilinx/kintex7/IOStandards.xml
+Loading device configuration modes from C:/NIFPGA/programs/Vivado2014_4/data\parts/xilinx/kintex7/ConfigModes.xml
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.runs/synth_1/.Xil/Vivado-11136-/dcp/clk_wiz_0_in_context.xdc] for cell 'u_clk_wiz'
+Finished Parsing XDC File [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.runs/synth_1/.Xil/Vivado-11136-/dcp/clk_wiz_0_in_context.xdc] for cell 'u_clk_wiz'
+Parsing XDC File [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/constrs_1/new/AX7325_eth.xdc]
+WARNING: [Constraints 18-619] A clock with name 'sys_clk_p' already exists, overwriting the previous clock with the same name. [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/constrs_1/new/AX7325_eth.xdc:10]
+WARNING: [Vivado 12-507] No nets matched 'E_RXC_IBUF'. [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/constrs_1/new/AX7325_eth.xdc:58]
+Finished Parsing XDC File [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/constrs_1/new/AX7325_eth.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.srcs/constrs_1/new/AX7325_eth.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/udp_echo_top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 633.313 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 633.313 ; gain = 438.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k325tffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 633.313 ; gain = 438.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk_p. (constraint file  E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.runs/synth_1/.Xil/Vivado-11136-/dcp/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk_n. (constraint file  E:/LabVIEW_to_VHDL_projects/Ethernet_2/Ethernet_2.runs/synth_1/.Xil/Vivado-11136-/dcp/clk_wiz_0_in_context.xdc, line 5).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 633.313 ; gain = 438.754
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'udp_rx'
+ROM "byte_cnt" won't be mapped to RAM because it is too sparse.
+ROM "state" won't be mapped to RAM because it is too sparse.
+ROM "state" won't be mapped to RAM because it is too sparse.
+ROM "state" won't be mapped to RAM because it is too sparse.
+ROM "ip_proto" won't be mapped to RAM because it is too sparse.
+ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+ROM "state" won't be mapped to RAM because it is too sparse.
+ROM "state" won't be mapped to RAM because it is too sparse.
+ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+ROM "state" won't be mapped to RAM because it is too sparse.
+ROM "state" won't be mapped to RAM because it is too sparse.
+ROM "state" won't be mapped to RAM because it is too sparse.
+ROM "state" won't be mapped to RAM because it is too sparse.
+ROM "state" won't be mapped to RAM because it is too sparse.
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'udp_tx'
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'udp_rx'
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'udp_tx'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 633.313 ; gain = 438.754
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 6     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 6     
+	   2 Input     11 Bit       Adders := 4     
++---XORs : 
+	   2 Input      1 Bit         XORs := 86    
+	   4 Input      1 Bit         XORs := 58    
+	   5 Input      1 Bit         XORs := 33    
+	   6 Input      1 Bit         XORs := 6     
+	   8 Input      1 Bit         XORs := 7     
+	   3 Input      1 Bit         XORs := 15    
+	   7 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	               11 Bit    Registers := 7     
+	                8 Bit    Registers := 4     
+	                1 Bit    Registers := 4     
++---RAMs : 
+	              16K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 1     
+	   3 Input     11 Bit        Muxes := 1     
+	   8 Input     11 Bit        Muxes := 3     
+	  12 Input     11 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 5     
+	   5 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	  17 Input      4 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 19    
+	   8 Input      1 Bit        Muxes := 15    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module udp_echo_top 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---RAMs : 
+	              16K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module udp_rx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               11 Bit    Registers := 4     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 1     
+	   3 Input     11 Bit        Muxes := 1     
+	   8 Input     11 Bit        Muxes := 2     
+	  17 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+	   8 Input      1 Bit        Muxes := 10    
+Module udp_tx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 6     
+	   2 Input     12 Bit       Adders := 6     
+	   2 Input     11 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 86    
+	   4 Input      1 Bit         XORs := 58    
+	   5 Input      1 Bit         XORs := 33    
+	   6 Input      1 Bit         XORs := 6     
+	   8 Input      1 Bit         XORs := 7     
+	   3 Input      1 Bit         XORs := 15    
+	   7 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               11 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	  12 Input     11 Bit        Muxes := 1     
+	   8 Input     11 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 5     
+	   5 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   8 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 840 (col length:140)
+BRAMs: 890 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 633.313 ; gain = 438.754
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+ROM "byte_cnt" won't be mapped to RAM because it is too sparse.
+ROM "state" won't be mapped to RAM because it is too sparse.
+ROM "state" won't be mapped to RAM because it is too sparse.
+ROM "state" won't be mapped to RAM because it is too sparse.
+ROM "ip_proto" won't be mapped to RAM because it is too sparse.
+ROM "state" won't be mapped to RAM because it is too sparse.
+ROM "state" won't be mapped to RAM because it is too sparse.
+ROM "state" won't be mapped to RAM because it is too sparse.
+ROM "state" won't be mapped to RAM because it is too sparse.
+ROM "state" won't be mapped to RAM because it is too sparse.
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 633.313 ; gain = 438.754
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 633.313 ; gain = 438.754
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM payload_ram_reg to conserve power
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM:
++-------------+-----------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+------------------------+
+|Module Name  | RTL Object      | PORT A (depth X width) | W | R | PORT B (depth X width) | W | R | OUT_REG      | RAMB18 | RAMB36 | Hierarchical Name      | 
++-------------+-----------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+------------------------+
+|udp_echo_top | payload_ram_reg | 2 K X 8                | W |   | 2 K X 8(WRITE_FIRST)   |   | R | Port A and B | 1      | 0      | udp_echo_top/extram__2 | 
++-------------+-----------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+------------------------+
+
+Note: The table shows RAMs generated at current stage. Some RAM generation could be reversed due to later optimizations. Multiple instantiated RAMs are reported only once. "Hierarchical Name" reflects the hierarchical modules names of the RAM and only part of it is displayed.
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\u_tx/tx_busy_reg ) is unused and will be removed from module udp_echo_top.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 633.313 ; gain = 438.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 633.313 ; gain = 438.754
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 633.313 ; gain = 438.754
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 633.313 ; gain = 438.754
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'sys_clk_p'
+INFO: Moved 2 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 633.313 ; gain = 438.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 633.313 ; gain = 438.754
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance payload_ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 633.313 ; gain = 438.754
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 633.313 ; gain = 438.754
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 633.313 ; gain = 438.754
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 633.313 ; gain = 438.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |clk_wiz_0 |     1|
+|2     |BUFG      |     1|
+|3     |CARRY4    |    14|
+|4     |LUT1      |    21|
+|5     |LUT2      |    75|
+|6     |LUT3      |    51|
+|7     |LUT4      |    61|
+|8     |LUT5      |    67|
+|9     |LUT6      |   217|
+|10    |MUXF7     |    13|
+|11    |ODDR      |     1|
+|12    |RAMB18E1  |     1|
+|13    |FDCE      |    90|
+|14    |FDRE      |   137|
+|15    |IBUF      |    11|
+|16    |OBUF      |    11|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   774|
+|2     |  u_rx   |udp_rx |   286|
+|3     |  u_tx   |udp_tx |   407|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 633.313 ; gain = 438.754
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:19 . Memory (MB): peak = 633.313 ; gain = 76.422
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 633.313 ; gain = 438.754
+INFO: [Project 1-571] Translating synthesized netlist
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'payload_ram_reg' of type 'RAMB18E1' is 'VIRTEX6'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist or constraint file.
+INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 633.313 ; gain = 436.555
+# write_checkpoint -noxdef udp_echo_top.dcp
+# catch { report_utilization -file udp_echo_top_utilization_synth.rpt -pb udp_echo_top_utilization_synth.pb }
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.085 . Memory (MB): peak = 633.313 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 27 19:05:08 2026...
